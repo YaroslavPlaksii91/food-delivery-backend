@@ -1,9 +1,7 @@
 const { product: service } = require('../../services');
 
-const get = async (req, res) => {  
-  const { shop } = req.params;
-  
-  const products = await service.getAllProducts(shop);
+const get = async (_, res) => {    
+  const products = await service.getAllProducts();
 
   res.json({
     status: "success",

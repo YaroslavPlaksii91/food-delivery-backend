@@ -1,8 +1,8 @@
 const { Product } = require('../models');
 
-const getAllProducts = (shop) =>
-  Product.find({owner: shop}).populate('owner', 'name');
-
+const getAllProducts = () =>
+  Product.find({}).populate('owner', 'name');
+  
 const getProductById = (id) =>
   Product.findById(id).populate('owner', 'name');
 
