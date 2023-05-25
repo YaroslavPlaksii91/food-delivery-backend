@@ -59,7 +59,8 @@ const addSchema = Joi.object({
     Joi.object({
       name: Joi.string().required(),
       quantity: Joi.number().required(),
-      price: Joi.number().required()
+      price: Joi.number().required(),
+      shop: Joi.string().required()
     })
   ).required(),
   total: Joi.number().required()
